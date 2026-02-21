@@ -14,8 +14,8 @@ https://chat.whatsapp.com/FdV4aASn7DnDAU1dZ8GHO7
 ---
 
 ### 🗓️ Important Dates
-- **Jan 28:** Final Submission Deadline (Code + Documentation)
-- **Jan 29 – Jan 31:** Review Period  
+- **Feb 27:** Final Submission Deadline (Code + Documentation)
+- **Feb 28 – Mar 1:** Review Period  
   *(Technical Review, Peer Review, and Grading)*
 
 ---
