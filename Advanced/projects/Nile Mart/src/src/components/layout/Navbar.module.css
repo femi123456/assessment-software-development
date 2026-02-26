@@ -1,0 +1,178 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+}
+
+.navInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.rightSide {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.logoText {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--foreground);
+    letter-spacing: -0.04em;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navLink {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--foreground);
+    transition: opacity 0.2s;
+    opacity: 0.8;
+}
+
+.navLink:hover,
+.active {
+    opacity: 1;
+}
+
+.walletDisplay {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: var(--gray-50);
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gray-900);
+    transition: background 0.2s;
+}
+
+.walletDisplay:hover {
+    background: var(--gray-100);
+}
+
+.walletDisplay i {
+    color: var(--accent);
+    font-size: 16px;
+}
+
+.avatarLink {
+    display: flex;
+    align-items: center;
+    opacity: 1 !important;
+}
+
+.avatarCircle {
+    width: 32px;
+    height: 32px;
+    background: var(--foreground);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.avatarLink:hover .avatarCircle {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--accent);
+}
+
+.cartIcon {
+    position: relative;
+    font-size: 20px;
+    color: var(--foreground);
+}
+
+.cartBadge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: var(--accent);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: var(--radius-full);
+}
+
+.navActions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--foreground);
+    cursor: pointer;
+    padding: 4px;
+}
+
+@media (max-width: 768px) {
+    .menuToggle {
+        display: block;
+    }
+
+    .links {
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 1px solid var(--glass-border);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .menuOpen {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .navLink {
+        font-size: 16px;
+        width: 100%;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--gray-50);
+    }
+
+    .navLink:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .navActions {
+        gap: 12px;
+    }
+}

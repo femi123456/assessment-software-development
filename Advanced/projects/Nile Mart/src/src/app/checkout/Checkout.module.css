@@ -1,0 +1,224 @@
+.page {
+    padding: 60px 0;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+}
+
+.section {
+    background: white;
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius-2xl);
+    padding: 32px;
+    margin-bottom: 24px;
+}
+
+.section h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border: 2px solid var(--gray-100);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--accent);
+}
+
+.option.active {
+    border-color: var(--accent);
+    background: #f0f7ff;
+}
+
+.optionInfo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.optionInfo i {
+    font-size: 24px;
+    color: var(--accent);
+}
+
+.optionInfo strong {
+    display: block;
+    font-size: 16px;
+    color: var(--gray-900);
+}
+
+.optionInfo p {
+    font-size: 13px;
+    color: var(--gray-500);
+    margin: 0;
+}
+
+.fee {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--gray-900);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputGroup label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-700);
+}
+
+.input {
+    padding: 14px;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input:focus {
+    border-color: var(--accent);
+}
+
+/* Sidebar Summary */
+.summaryCard {
+    background: white;
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius-2xl);
+    padding: 32px;
+    position: sticky;
+    top: 100px;
+}
+
+.summaryCard h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: var(--gray-600);
+}
+
+.totalRow {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-100);
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--gray-900);
+}
+
+.paymentInfo {
+    margin: 24px 0;
+    padding: 16px;
+    background: var(--gray-50);
+    border-radius: 12px;
+}
+
+.walletStatus {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.lowBalance {
+    color: #f43f5e;
+}
+
+.warning {
+    font-size: 12px;
+    color: #f43f5e;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.payBtn {
+    width: 100%;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.payBtn:disabled {
+    background: var(--gray-300);
+    cursor: not-allowed;
+}
+
+.escrowNotice {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    padding: 16px;
+    background: #f0fdf4;
+    border-radius: 12px;
+    color: #166534;
+}
+
+.escrowNotice i {
+    font-size: 20px;
+}
+
+.escrowNotice p {
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        order: -1;
+    }
+}

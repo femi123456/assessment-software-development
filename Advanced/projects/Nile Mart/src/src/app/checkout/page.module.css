@@ -1,0 +1,171 @@
+.container {
+    padding: 40px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.mainCol {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.formSection {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    box-shadow: var(--card-shadow);
+}
+
+.sectionTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.sideCol {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: sticky;
+    top: 88px;
+}
+
+.itemsList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.itemRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemName {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--slate-900);
+}
+
+.itemMeta {
+    font-size: 11px;
+    color: var(--slate-500);
+}
+
+.itemPrice {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--slate-600);
+    margin-bottom: 8px;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--slate-200);
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--slate-900);
+}
+
+.payButton {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.securitySeal {
+    background-color: #E1F5FE;
+    border: 1px solid var(--info);
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    color: #01579B;
+}
+
+.securitySeal i {
+    font-size: 20px;
+}
+
+.securitySeal strong {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.securitySeal p {
+    font-size: 11px;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sideCol {
+        position: static;
+    }
+}
+
+/* Success State */
+.successContainer {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.successIcon {
+    font-size: 64px;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.successTitle {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.successText {
+    color: var(--gray-500);
+    margin-bottom: 32px;
+}

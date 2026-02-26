@@ -1,0 +1,132 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.modal h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.modal p {
+    margin-bottom: 1.5rem;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.optionLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.optionLabel:hover {
+    background: #f7fafc;
+    border-color: #cbd5e0;
+}
+
+.optionLabel input {
+    width: 1.25rem;
+    height: 1.25rem;
+    accent-color: #df2020;
+}
+
+.otherInput {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 80px;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.submitBtn {
+    flex: 2;
+    padding: 0.75rem;
+    background: #df2020;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submitBtn:hover {
+    background: #b51a1a;
+}
+
+.submitBtn:disabled {
+    background: #feb2b2;
+    cursor: not-allowed;
+}
+
+.cancelBtn {
+    flex: 1;
+    padding: 0.75rem;
+    background: #edf2f7;
+    color: #4a5568;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cancelBtn:hover {
+    background: #e2e8f0;
+}
+
+.successMessage {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.successMessage i {
+    font-size: 3rem;
+    color: #48bb78;
+    display: block;
+    margin-bottom: 1rem;
+}

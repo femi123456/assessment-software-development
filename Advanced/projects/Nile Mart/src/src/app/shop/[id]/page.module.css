@@ -1,0 +1,127 @@
+.page {
+    padding: 80px 0;
+}
+
+.productGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.imageContainer {
+    position: relative;
+    aspect-ratio: 4/5;
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.infoSection {
+    padding-top: 20px;
+}
+
+.category {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: block;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.description {
+    margin-bottom: 40px;
+}
+
+.description h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-400);
+}
+
+.description p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--gray-500);
+}
+
+.sellerInfo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    margin-bottom: 40px;
+}
+
+.sellerAvatar {
+    width: 48px;
+    height: 48px;
+    background: var(--gray-200);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--gray-500);
+}
+
+.sellerName {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.sellerStatus {
+    font-size: 13px;
+    color: var(--gray-500);
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.guarantee {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--gray-500);
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .productGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+}

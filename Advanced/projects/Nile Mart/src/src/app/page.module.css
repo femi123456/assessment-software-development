@@ -1,0 +1,229 @@
+.hero {
+    padding: 120px 0 80px;
+    background-color: var(--background);
+    text-align: center;
+}
+
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    margin-bottom: 24px;
+}
+
+.gradientText {
+    background: linear-gradient(90deg, #007cf0, #00dfd8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: var(--gray-500);
+    margin-bottom: 40px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.heroSearch {
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.sectionTitle {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.viewAll {
+    color: var(--accent);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.categoryGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.categoryCard {
+    position: relative;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+/* Bento Sizing */
+.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.medium {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.categoryBg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    transition: transform 0.7s ease;
+}
+
+.bgImage {
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.categoryContent {
+    position: relative;
+    z-index: 2;
+    padding: 24px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter: blur(4px);
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.categoryHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.categoryIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.categoryName {
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    letter-spacing: -0.02em;
+}
+
+.categoryDesc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+    max-width: 280px;
+}
+
+/* Hover States */
+.categoryCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.categoryCard:hover .categoryBg {
+    transform: scale(1.1);
+}
+
+.categoryCard:hover .bgImage {
+    filter: brightness(0.9);
+}
+
+.categoryCard:hover .categoryDesc {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.categoryCard:hover .categoryContent {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+@media (max-width: 1024px) {
+    .categoryGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .categoryGrid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 240px;
+    }
+
+    .large,
+    .medium,
+    .small {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .categoryDesc {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+}
