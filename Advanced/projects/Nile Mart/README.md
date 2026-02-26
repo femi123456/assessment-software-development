@@ -23,32 +23,9 @@
 
 ## Deployment Info
 **Hosting Platform:** Vercel
+https://nile-mart-five.vercel.app/
 
-**Steps to Deploy:**
-1. Push code to GitHub repository.
-2. Connect repository to Vercel.
-3. Add environment variables in Vercel dashboard (MongoDB URI, JWT secret, cloud storage keys).
-4. Vercel automatically builds and deploys the Next.js project.
-5. Verify deployment via provided Vercel URL.
-
-**Local Development:**
-```bash
-# Clone the repo
-git clone <repo-url>
-cd projects/nile-mart
-
-# Install dependencies
-npm install
-
-# Create environment file
-cp .env.example .env.local
-
-# Run development server
-npm run dev
-```
-Visit `http://localhost:3000` to access the app locally.
-
----
+--
 
 ## Documentation Links
 - [Architecture](docs/architecture.md)
